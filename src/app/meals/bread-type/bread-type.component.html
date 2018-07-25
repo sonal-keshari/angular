@@ -1,0 +1,6 @@
+<h3> choose bread type</h3>
+<ngx-select-dropdown  [options]="breadTypeOptions"
+                      [(value)]="bread" (change)="sendBreadType()"></ngx-select-dropdown>
+
+
+<p>{{bread}}</p>

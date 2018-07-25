@@ -1,0 +1,22 @@
+<div class="alert alert-info" role="alert">Meat (Pick only one)
+</div>
+
+<!-- input from parent-->
+<p class="text-left text-monospace">Selected Bread Size is <button type="button" class="btn btn-dark">{{breadSize}}</button></p>
+<p class="text-left text-monospace">Selected Bread type is <button type="button" class="btn btn-info">{{breadChosen}}</button></p>
+
+<select #meat (change)="selectedMeat = meat.value" class="form-control">
+  <option *ngFor="let item of meatOptions" value="{{item.name}}">{{item.name}}</option>
+</select>
+
+<button class="btn btn-primary" (click)="getSelectedMeat()"> Save the Meat</button>
+
+<!--output from child-->
+<p class="text-left text-monospace" *ngIf="filling_empty">filling Chosen are <span *ngFor="let item of fillingChosen"><button type="button" class="btn btn-success">{{item.name}}</button></span></p>
+<p class="text-left text-monospace" *ngIf="sauce_empty">Sauce Chosen are <span *ngFor="let item of sauceChosen12"><button type="button" class="btn btn-warning">{{item.name}}</button></span></p>
+
+<app-filling *ngIf="meat_empty" [breadSize]="breadSize" [breadChosen]="breadChosen" [meatChosen]="selectedMeat" (fillingChosen)="getSelectedFillings($event)" (sauceChosen1)="getSelectedSauces($event)"></app-filling>
+
+
+
+<p *ngFor="let item of sauceChosen12">{{item.name }}</p>

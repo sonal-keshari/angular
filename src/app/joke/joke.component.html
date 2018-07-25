@@ -1,0 +1,99 @@
+<!-- <p>{{name}}</p> -->
+<!-- string interpolation -->
+<!-- <p>{{name}} {{'keshari'}} no is {{id}} {{hasLastName}}</p> -->
+
+<!-- <p>{{getName()}}</p> -->
+
+<!-- property binding -->
+<!-- <button class="btn btn-primary" [disabled]="!hasLastName">click me</button>
+
+
+<p>heloo sonal</p> -->
+
+<!-- {{name}}, {{id}} -->
+<!-- ngFor -->
+<!--<ul>-->
+    <!--<li *ngFor="let item of colors">-->
+      <!--<p *ngIf="item.color != 'red'">{{item.color}}</p>-->
+      <!--&lt;!&ndash;<p [ngIf]="item.color != 'red'">{{item.color}}</p>&ndash;&gt;-->
+    <!--</li>-->
+<!--</ul>-->
+<!-- ngIfThenElse -->
+<!-- <div *ngIf="condition; then thenBlock; then thenBlock1; else elseBlock">hi this is sonal</div>
+<ng-template #thenBlock>this is then block</ng-template>
+<ng-template #thenBlock1>this is then block 1</ng-template>
+<ng-template #elseBlock>this is else block</ng-template>
+
+<!-- ngSwitch -->
+<!-- <div *ngSwitch = "red"></div>
+<div *ngSwitchCase = "red"></div>
+<div *ngSwitchCase = "black"></div>
+<div *ngSwitchDefault = "yellow"></div> -->
+<!--<input  type="text" (input)="name1 =$event.target.value">{{name1}}-->
+<!--<input  type="text" [(ngModel)]="name1">{{name1}}-->
+<!--
+<input  type="text" [(ngModel)]="name1">
+<input  type="text" (input)="name1 =$event.target.value">
+<input type="text" [(ngModel)]="name2">
+<button (click)="getValue()"></button>
+
+<!--<app-jokelist [JokeList]='jokelistNew'></app-jokelist> &ndash;&gt;-->
+
+
+
+<!-- two way binding -->
+<!--<input type="text" class="form-control" [(ngModel)]="text">-->
+<!--<input type="text" class="form-control"  [value]="text">-->
+
+<!--&lt;!&ndash; custom property binding &ndash;&gt;-->
+<!--<input type="text" class="form-control"  [value]="name1">-->
+<!--<input type="text" class="form-control"  [value]="name2">-->
+
+<!-- pre defined property binding using directives -->
+
+<!-- <button class="btn btn-primary" [disabled]= "!condition">ClickMe</button> -->
+
+<!--change text color on click of button -->
+<!--<input type="text" class="form-control" [value]="name1"  [ngStyle]="myStyle">-->
+<!--<button class="btn btn-primary" (click)="myStyle={'color':'red'}">ClickMe</button>-->
+
+<!--<input type="text" class="form-control" [value]="name1"  [ngStyle]="{color: style}">-->
+<!--<button class="btn btn-primary" (click)="updateColor()">ClickMe</button>-->
+
+<!-- ngswitch-->
+<!--{{colors[0].color}}-->
+<!--<p>-->
+  <!--<div [ngSwitch]="colors[0].color">-->
+  <!--<span *ngSwitchCase="'red'"> this is red</span>-->
+  <!--<span *ngSwitchCase="'blue'"> this is blue</span>-->
+  <!--<span *ngSwitchDefault> this is prime</span>-->
+  <!--</div>-->
+<!--</p>-->
+
+
+<!--<input  type="text" class="form-control" [(ngModel)]="name1">-->
+<!--&lt;!&ndash;<input  type="text" (input)="name1 =$event.target.value">&ndash;&gt;-->
+<!--<input type="text" class="form-control" [(ngModel)]="name2">-->
+<!--<button class="btn btn-primary"  (click)="getValue()">Click me</button>-->
+<!--<h4>List of users</h4>-->
+<!--<ul>-->
+  <!--<li *ngFor="let item of userlist">-->
+          <!--{{item.firstName}} {{item.lastName}}-->
+  <!--</li>-->
+<!--</ul>-->
+
+
+
+<!-- custom directive -->
+<!--<h3 appColor={{color}}>Subway</h3>-->
+<!--<h3 [appColor]="color">Subway</h3>-->
+<!--<h3 bind-appColor="color">Subway</h3>-->
+
+
+
+<!--<ul>-->
+  <!--<li *ngFor="let item of colorSelected">{{item}}</li>-->
+<!--</ul>-->
+
+
+<app-joke-list></app-joke-list>

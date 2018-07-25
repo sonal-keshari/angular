@@ -1,0 +1,20 @@
+<div class="alert alert-info" role="alert">Choose Filling (Multiple)
+</div>
+
+<select class="form-control"  multiple [(ngModel)]="getFilling">
+  <option *ngFor="let item of fillingOptions">
+    {{item.name}}
+  </option>
+</select>
+
+<!-- input from parent-->
+<p class="text-left text-monospace">Selected Bread Size is <button type="button" class="btn btn-dark">{{breadSize}}</button></p>
+<p class="text-left text-monospace">Selected Bread type is <button type="button" class="btn btn-info">{{breadChosen}}</button></p>
+<p class="text-left text-monospace">Selected Meat is <button type="button" class="btn btn-danger">{{meatChosen}}</button></p>
+
+
+<button class="btn btn-primary" (click)="getFillingType()">Save Filling</button>
+
+
+
+<app-sausage *ngIf="filling_empty" [breadSize]="breadSize" [breadChosen]="breadChosen" [meatChosen]="meatChosen" [fillingChosen]="selectedFilling"></app-sausage>

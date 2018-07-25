@@ -1,0 +1,33 @@
+
+<h3> choose meal size</h3>
+<ngx-select-dropdown  [options]="mealSizeOptions"
+                     [(value)]="size" (change)="getMealSize()"></ngx-select-dropdown>
+
+Meal size selected : <p appFont>{{size}}</p>
+
+ Bread Type Selected is : <p >{{breadTypeSelected}}</p>
+
+
+Veg Toppings Selected are :
+<p *ngFor="let item of veggies">{{item}}</p>
+
+NonVeg Toppings Selected are :
+<p *ngFor="let item of nonveg">{{item}}</p>
+
+Sauce Selected are :
+<p *ngFor="let item of sauceChosen">{{item}}</p>
+
+
+<app-bread-type (breadSelected)="rcvBreadType($event)"></app-bread-type>
+
+
+<app-toppings></app-toppings>
+
+
+<app-nonveg></app-nonveg>
+
+<app-sauces></app-sauces>
+
+<p [style.font-size]="val">this is angular</p>
+
+
