@@ -23,6 +23,8 @@ import { FontDirective } from './font.directive';
 import { JokeListComponent } from './joke/joke-list/joke-list.component';
 import { SaucesComponent } from './meals/sauces/sauces.component';
 import { ListComponent } from './hero/list/list.component';
+import {MovieService} from './movie.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,9 +52,10 @@ import { ListComponent } from './hero/list/list.component';
   imports: [
     BrowserModule,
     FormsModule,
-    SelectDropDownModule
+    SelectDropDownModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

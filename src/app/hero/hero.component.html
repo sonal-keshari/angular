@@ -1,1 +1,4 @@
-<input [value]="name">
+<div *ngFor = "let item of observableMovie | async">
+  <p>Title : {{item.title}}</p>
+  <img  src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" height="300px" alt="{{item.title}}" (click)="getMovieDetail(item.id)">
+</div>
